@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home обработка ошибки сервера 1`] = `
+<div>
+  <div>
+    <button
+      data-cy="button"
+    >
+      Получить приветствие
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Home обработка ошибки сервера 2`] = `
+<div>
+  <div>
+    <button
+      data-cy="button"
+    >
+      Получить приветствие
+    </button>
+    <p
+      role="alert"
+    >
+      Не удалось получить приветствие
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Home успешное получение приветствия 1`] = `
+<div>
+  <div>
+    <button
+      data-cy="button"
+    >
+      Получить приветствие
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Home успешное получение приветствия 2`] = `
+<div>
+  <div>
+    <button
+      data-cy="button"
+      disabled=""
+    >
+      Готово
+    </button>
+    <h1
+      data-cy="heading"
+    >
+      Привет!
+    </h1>
+  </div>
+</div>
+`;
