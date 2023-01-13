@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import { GreetingProvider } from "./GreetingProvider";
+import FetchGreeting from "./FetchGreeting";
 import './App.css';
 
 function App() {
