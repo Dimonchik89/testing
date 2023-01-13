@@ -23,8 +23,10 @@ describe("Home", () => {
 
         fireEvent.click(screen.getByText('Получить приветствие'))
         await waitFor(() => screen.getByRole("heading"))
+        const { getByDataCy } = render(<FetchGreeting url='/greeting' />)
 
-        expect(screen.getByRole("heading")).toHaveTextContent('Привет!')
+        expect(getByDataCy('heading')).toHaveTextContent('Привет!')
+        // expect(screen.getByRole("heading")).toHaveTextContent('Привет!')
         expect(screen.getByRole("button")).toHaveTextContent("Готово")
         expect(screen.getByRole("button")).toBeDisabled()
     })
