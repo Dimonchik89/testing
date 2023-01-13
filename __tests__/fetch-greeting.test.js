@@ -26,9 +26,11 @@ describe("Home", () => {
         const { getByDataCy } = render(<FetchGreeting url='/greeting' />)
 
         expect(getByDataCy('heading')).toHaveTextContent('Привет!')
+        expect(screen.getAllByRole("button")[0]).toHaveTextContent("Готово")
+        expect(screen.getAllByRole("button")[0]).toBeDisabled()
         // expect(screen.getByRole("heading")).toHaveTextContent('Привет!')
-        expect(screen.getByRole("button")).toHaveTextContent("Готово")
-        expect(screen.getByRole("button")).toBeDisabled()
+        // expect(screen.getByRole("button")).toHaveTextContent("Готово")
+        // expect(screen.getByRole("button")).toBeDisabled()
     })
 
     test("обработка ошибки сервера", async () => {
@@ -36,7 +38,7 @@ describe("Home", () => {
         render(<FetchGreeting url="greeting"/>)
 
         // const user = userEvent.setup()
-        await userEvent.click(screen.getByText('Получить приветствие'))
+        await userEvent.click(screen.getByRole("button"))
         await waitFor(() => screen.getByRole("alert"))
 
         expect(screen.getByRole("alert")).toHaveTextContent('Не удалось получить приветствие')

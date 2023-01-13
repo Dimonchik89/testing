@@ -74,7 +74,7 @@ const FetchGreeting = ({ url }) => {
 
   return (
     <div>
-      <button onClick={() => fetchGreeting(url)} disabled={btnClicked}>
+      <button data-cy='button' onClick={() => fetchGreeting(url)} disabled={btnClicked}>
         {btnText}
       </button>
       {/* ! */}
