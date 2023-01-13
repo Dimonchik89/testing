@@ -1,7 +1,7 @@
 import { rest   } from "msw";
 import { setupServer } from 'msw/node'
-import { render, fireEvent, waitFor, screen } from '@testing-library/react'
-// import { render, fireEvent, waitFor, screen } from 'test-utils'
+// import { render, fireEvent, waitFor, screen } from '@testing-library/react'
+import { render, fireEvent, waitFor, screen } from 'test-utils'
 import FetchGreeting from '../src/FetchGreeting'
 import userEvent from '@testing-library/user-event'
 
